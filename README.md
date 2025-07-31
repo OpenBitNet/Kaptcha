@@ -7,6 +7,7 @@
 ![数学验证码示例](https://file.mazepeng.com/math_captcha_1.png)
 ![数学验证码示例](https://file.mazepeng.com/math_captcha_2.png)
 ![数学验证码示例](https://file.mazepeng.com/math_captcha_3.png)
+![数学验证码示例](https://file.mazepeng.com/arithmetic_captcha.png)
 
 
 ---
