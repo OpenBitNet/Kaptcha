@@ -97,7 +97,7 @@ public final class Captcha {
         try {
             ImageIO.write(this.image, "png", baos);
             byte[] imageBytes = baos.toByteArray();
-            return "data:image/png;base64," + Base64.getEncoder().encodeToString(imageBytes);
+            return Base64.getEncoder().encodeToString(imageBytes);
         } catch (IOException e) {
             throw new CaptchaGenerationException("Failed to convert captcha image to Base64.", e);
         }
