@@ -1,34 +1,39 @@
-
-# Kaptcha - 一个灵活、易用且可高度扩展的Java验证码库
-
-**Kaptcha** 是一个轻量级的Java验证码生成库，它从零开始构建，旨在提供极致的灵活性和简单的API。
-无论您是需要一个开箱即用的验证码解决方案，还是希望深度定制每一个干扰元素和文字样式，Kaptcha 都能满足您的需求。
-
-![数学验证码示例](https://file.mazepeng.com/math_captcha_1.png)
-![数学验证码示例](https://file.mazepeng.com/math_captcha_2.png)
-![数学验证码示例](https://file.mazepeng.com/math_captcha_3.png)
-![数学验证码示例](https://file.mazepeng.com/arithmetic_captcha.png)
+# Kaptcha - A Flexible, Easy-to-Use, and Highly Extensible Java CAPTCHA Library
 
 
----
+<!-- Keep these links. Translations will automatically update with the README. -->
+[English](README.md) |
+[日本語](README_ja.md) |
+[中文](README_zh.md)
 
-## ✨ 特性
+**Kaptcha** is a lightweight Java CAPTCHA generation library built from scratch, designed to provide ultimate flexibility and a simple API. 
+Whether you need an out-of-the-box CAPTCHA solution or want to deeply customize every distortion element and text style, Kaptcha can meet your requirements.
 
-- **简单易用**: 通过链式调用的 `Builder` 模式，只需几行代码即可生成验证码。
-- **高度可扩展**: 所有核心功能（如内容生成、干扰、字体、颜色）都通过接口定义，您可以轻松实现自己的逻辑并替换默认组件。
-- **丰富的内置组件**:
-    - **内容生成器**: 支持随机字符和四则运算。
-    - **干扰器**: 内置直线、贝塞尔曲线、噪点和波浪扭曲等多种干扰效果，并支持将它们组合使用。
-    - **字体支持**: 自动从项目资源中加载并随机使用漂亮的艺术字体。
-- **线程安全**: 核心的“生产者”模式设计，确保在多线程环境（如Web应用）中安全、高效地生成验证码。
-- **零依赖**: 无需任何第三方库，仅依赖标准Java JDK。
-- **多种输出格式**: 支持直接输出为 `BufferedImage`、写入文件流，或转换为 `Base64` 字符串以便在Web中使用。
+![Math CAPTCHA Example](https://file.mazepeng.com/math_captcha_1.png)
+![Math CAPTCHA Example](https://file.mazepeng.com/math_captcha_2.png)
+![Math CAPTCHA Example](https://file.mazepeng.com/math_captcha_3.png)
+![Math CAPTCHA Example](https://file.mazepeng.com/arithmetic_captcha.png)
 
 ---
 
-## 🚀 快速上手
+## ✨ Features
 
-### 1. 添加依赖 
+- **Easy to Use**: Generate CAPTCHAs with just a few lines of code through the chain-calling `Builder` pattern.
+- **Highly Extensible**: All core functionalities (such as content generation, distortion, fonts, colors) are defined via interfaces, allowing you to easily implement your own logic and replace default components.
+- **Rich Built-in Components**:
+    - **Content Generators**: Support random characters and arithmetic operations.
+    - **Distortions**: Built-in effects like straight lines, Bézier curves, noise, and wave distortions, with support for combining them.
+    - **Font Support**: Automatically loads and randomly uses beautiful artistic fonts from project resources.
+- **Thread-Safe**: Core "producer" pattern design ensures safe and efficient CAPTCHA generation in multi-threaded environments (e.g., web applications).
+- **Zero Dependencies**: No third-party libraries required, only relies on the standard Java JDK.
+- **Multiple Output Formats**: Supports direct output as `BufferedImage`, writing to file streams, or converting to `Base64` strings for web use.
+
+---
+
+## 🚀 Quick Start
+
+### 1. Add Dependency
+
 ```xml
 <dependency>
     <groupId>com.mazepeng</groupId>
@@ -37,12 +42,13 @@
 </dependency>
 ```
 
-### 2. 准备字体文件 (可选，但推荐)
-1. 在您的项目 `src/main/resources` 目录下创建一个 `fonts` 文件夹。
-2. 将您喜欢的 `.ttf` 或 `.otf` 字体文件放入该文件夹。
-   *(推荐一些免费商用字体如 Google Fonts 的 Kalam, Caveat, Press Start 2P 等)*
+### 2. Prepare Font Files (Optional but Recommended)
 
-### 3. 生成您的第一个验证码
+1. Create a `fonts` folder in your project's `src/main/resources` directory.
+2. Place your preferred `.ttf` or `.otf` font files in this folder.
+   *(Recommended free commercial fonts include Google Fonts' Kalam, Caveat, Press Start 2P, etc.)*
+
+### 3. Generate Your First CAPTCHA
 
 ```java
 import com.mazepng.captcha.Captcha;
@@ -77,11 +83,11 @@ public class QuickStart {
 
 ---
 
-## 🎨 高级用法
+## 🎨 Advanced Usage
 
-Kaptcha 的强大之处在于其灵活的配置和组件替换能力。
+The power of Kaptcha lies in its flexible configuration and component replacement capabilities.
 
-### 使用算术验证码和贝塞尔曲线干扰
+### Using Arithmetic CAPTCHA with Bézier Curve Distortion
 
 ```java
 import com.mazepeng.captcha.generator.ArithmeticGenerator;
@@ -102,9 +108,9 @@ Captcha mathCaptcha1 = mathProducer.nextCaptcha();
 Captcha mathCaptcha2 = mathProducer.nextCaptcha();
 ```
 
-### 组合多种干扰效果
+### Combining Multiple Distortion Effects
 
-您可以将多个干扰器组合在一起，创造出更复杂的验证码。
+You can combine multiple distorters to create more complex CAPTCHAs.
 
 ```java
 import com.mazepeng.captcha.interferer.*;
@@ -127,13 +133,13 @@ Captcha complexCaptcha = complexProducer.nextCaptcha();
 
 ---
 
-## 🛠️ 扩展您自己的组件
+## 🛠️ Extending Your Own Components
 
-想实现自己的干扰效果或文字生成逻辑？非常简单！只需要实现对应的接口即可。
+Want to implement your own distortion effects or text generation logic? It's simple! Just implement the corresponding interface.
 
-### 示例：创建一个画圆圈的干扰器
+### Example: Creating a Circle-Drawing Distorter
 
-1.  **实现 `IInterferer` 接口**
+1. **Implement the `IInterferer` Interface**
     ```java
     public class CircleInterferer implements IInterferer {
         private int count;
@@ -141,58 +147,64 @@ Captcha complexCaptcha = complexProducer.nextCaptcha();
 
         @Override
         public void draw(Graphics2D g, int width, int height) {
-            // ... 在这里实现画N个随机圆圈的逻辑 ...
+            // ... Implement the logic to draw N random circles here ...
         }
     }
     ```
-2.  **在构建时使用它**
+2. **Use It During Construction**
     ```java
     CaptchaProducer circleProducer = new CaptchaProducer.Builder()
-        .interferer(new CircleInterferer(15)) // 使用我们自己的干扰器
+        .interferer(new CircleInterferer(15)) // Use our custom interferer
         .build();
     ```
 
 ---
 
-## 📦 API 概览
+## 📦 API Overview
 
-### 核心类
-- **`CaptchaProducer`**: 验证码生产者，线程安全，可复用。通过 `Builder` 创建。
-    - `nextCaptcha()`: 生成一个新的 `Captcha` 实例。
-- **`Captcha`**: 代表一个具体的验证码实例。
-    - `getText()`: 获取验证码答案。
-    - `getImage()`: 获取 `BufferedImage` 图像。
-    - `toBase64()`: 获取 Base64 格式的图像字符串。
-    - `writeTo(OutputStream)`: 将图像写入输出流。
+### Core Classes
 
-### 核心接口 (`com.mazepeng.captcha.api`)
-- **`IGenerator`**: 内容生成器（如字符、算术）。
-- **`IInterferer`**: 干扰器（如线条、噪点）。
-- **`IFontProvider`**: 字体提供器。
-- **`IColorizer`**: 颜色选择器。
+- **`CaptchaProducer`**: A thread-safe, reusable captcha producer. Created via `Builder`.
+    - `nextCaptcha()`: Generates a new `Captcha` instance.
+- **`Captcha`**: Represents a specific captcha instance.
+    - `getText()`: Retrieves the captcha answer.
+    - `getImage()`: Retrieves the `BufferedImage` of the captcha.
+    - `toBase64()`: Retrieves the Base64-encoded image string.
+    - `writeTo(OutputStream)`: Writes the image to an output stream.
 
-### 内置组件
+### Core Interfaces (`com.mazepeng.captcha.api`)
 
-#### 生成器
-- **`ArithmeticGenerator`**: 算术题生成器。
-- **`CharGenerator`**: 字符生成器。
+- **`IGenerator`**: Content generator (e.g., characters, arithmetic).
+- **`IInterferer`**: Interferer (e.g., lines, noise).
+- **`IFontProvider`**: Font provider.
+- **`IColorizer`**: Color selector.
 
-#### 干扰器
-- **`LineInterferer`**: 直线干扰器。
-- **`WarpInterferer`**: 波浪干扰器。
-- **`BesselCurveInterferer`**: 贝塞尔曲线干扰器。
-- **`NoiseInterferer`**: 噪点干扰器。
-- **`CompositeInterferer`**: 复合干扰器，将多个干扰器组合在一起。
+### Built-in Components
 
-#### 字体提供器
-- **`DefaultFontProvider`**: 默认字体提供器。
-- **`RandomFontProvider`**: 随机字体提供器。
+#### Generators
 
-#### 颜色选择器
-- **`RandomColorizer`**: 随机颜色选择器。
+- **`ArithmeticGenerator`**: Arithmetic problem generator.
+- **`CharGenerator`**: Character generator.
+
+#### Interferers
+
+- **`LineInterferer`**: Line interferer.
+- **`WarpInterferer`**: Wave interferer.
+- **`BesselCurveInterferer`**: Bézier curve interferer.
+- **`NoiseInterferer`**: Noise interferer.
+- **`CompositeInterferer`**: Composite interferer that combines multiple interferers.
+
+#### Font Providers
+
+- **`DefaultFontProvider`**: Default font provider.
+- **`RandomFontProvider`**: Random font provider.
+
+#### Color Selectors
+
+- **`RandomColorizer`**: Random color selector.
 
 ---
 
-## 📜 许可
+## 📜 License
 
-本项目采用 [MIT License](LICENSE.txt) 许可。
+This project is licensed under the [MIT License](LICENSE.txt).
