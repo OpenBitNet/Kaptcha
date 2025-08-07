@@ -2,8 +2,8 @@
 # Kaptcha - 一个灵活、易用且可高度扩展的Java验证码库
 
 [English](../../README.md) |
-[日本語](../ja/README_ja.md) |
-[中文](README_zh.md)
+[日本語](../ja/README.md) |
+[中文](README.md)
 
 **Kaptcha** 是一个轻量级的Java验证码生成库，它从零开始构建，旨在提供极致的灵活性和简单的API。
 无论您是需要一个开箱即用的验证码解决方案，还是希望深度定制每一个干扰元素和文字样式，Kaptcha 都能满足您的需求。
