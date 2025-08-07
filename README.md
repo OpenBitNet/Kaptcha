@@ -3,8 +3,8 @@
 
 <!-- Keep these links. Translations will automatically update with the README. -->
 [English](README.md) |
-[日本語](README_ja.md) |
-[中文](README_zh.md)
+[日本語](docs/ja/) |
+[中文](docs/zh/)
 
 **Kaptcha** is a lightweight Java CAPTCHA generation library built from scratch, designed to provide ultimate flexibility and a simple API. 
 Whether you need an out-of-the-box CAPTCHA solution or want to deeply customize every distortion element and text style, Kaptcha can meet your requirements.

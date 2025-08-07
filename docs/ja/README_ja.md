@@ -1,8 +1,8 @@
 # Kaptcha - 柔軟で使いやすく高度に拡張可能なJava CAPTCHAライブラリ
 
-[English](README.md) |
+[English](../../README.md) |
 [日本語](README_ja.md) |
-[中文](README_zh.md)
+[中文](../zh/README_zh.md)
 
 **Kaptcha** は軽量なJava CAPTCHA生成ライブラリで、ゼロから構築され、究極の柔軟性とシンプルなAPIを提供します。
 すぐに使えるCAPTCHAソリューションが必要な場合でも、各ノイズ要素やテキストスタイルを深くカスタマイズしたい場合でも、Kaptchaはあらゆるニーズに対応できます。
