@@ -10,7 +10,7 @@
 
     <name>Kaptcha</name>
     <description>java图片验证码库</description>
-    <url>https://github.com/OpenBitSeed/Kaptcha.git</url>
+    <url>https://github.com/OpenBitNet/Kaptcha.git</url>
 
 
     <licenses>
@@ -28,9 +28,9 @@
     </developers>
     <!-- SCM信息 (Maven Central 要求) -->
     <scm>
-        <connection>scm:git:git://github.com/OpenBitSeed/Kaptcha.git</connection>
-        <developerConnection>scm:git:ssh://github.com:OpenBitSeed/Kaptcha.git</developerConnection>
-        <url>https://github.com/OpenBitSeed/Kaptcha/tree/main</url>
+        <connection>scm:git:git://github.com/OpenBitNet/Kaptcha.git</connection>
+        <developerConnection>scm:git:ssh://github.com:OpenBitNet/Kaptcha.git</developerConnection>
+        <url>https://github.com/OpenBitNet/Kaptcha/tree/main</url>
     </scm>
 
     <distributionManagement>
